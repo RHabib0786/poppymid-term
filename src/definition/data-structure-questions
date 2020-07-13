@@ -1,20 +1,82 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A.Data structure is a particular way of organizing and storing data in a computer
+ so that it can be accessed and modified efficiently. Data structure is a collection of data values,
+ the relationships among them, and the functions or operations that can be applied to the data.
+  That said, data structures are important because they are like the behind-the-scenes
+  workers that you, as the programmer, are directing. ... Data structures are building blocks of many things
+  you want to do. If you know the uses for each data structure, its weaknesses and strong points then you can easily solve problems.
+  The algorithms describe the way the data is to be transformed. The reason for learning about data structures is
+  because adding structure to our data can make the algorithms much simpler, easier to maintain, and often faster.
 
 
 What are the various operations that can be performed on different Data Structures?
+The basic operations that are performed on data structures are as follows: Insertion:
+Insertion means addition of a new data element in a data structure. Deletion: Deletion means removal of a data
+ element from a data structure if it is found.
+However, all operations on data structures are related to data and in that sense they
+share a similarity with database. Operations are of four types: Create, Retrieve, Update and Delete or CRUD.
+
 List out the areas in which data structures are applied extensively?
+Compiler Design,
+Operating System,
+Database Management System,
+Statistical analysis package,
+Numerical Analysis,
+Graphics,
+Artificial Intelligence,
+and Simulation.
+
 what is an Array?
+Arrays a kind of data structure that can store
+a fixed-size sequential collection of elements of the same type.
+An array is used to store a collection of data, but it is often more
+useful to think of an array as a collection of variables of the same type.
+
 what is the difference between the Array and ArrayList?
+Array is a fixed length data structure whereas ArrayList is a variable length Collection class.
+We cannot change length of array once created in Java but ArrayList can be changed.
+We cannot store primitives in ArrayList, it can only store objects.
+But array can contain both primitives and objects in Java.
+
 what is LinkedList?
+a linked list is a linear collection of data elements
+whose order is not given by their physical placement in memory.
+ It is a data structure consisting of a collection of nodes which
+ together represent a sequence.
+
 How is an Array different from Linked List?
+Difference Between Array and Linked List.
+Basically, an array is a set of similar data objects stored in
+sequential memory locations under a common heading or a variable name.
+While a linked list is a data structure which contains a sequence of the
+elements where each element is linked to its next element.
+
 what is queue?
+In computer science, a queue is a collection of entities that are
+maintained in a sequence and can be modified
+ by the addition of entities at one end of the sequence and the
+ removal of entities from the other end of the sequence.
+
 what is stack?
+In computer science, a stack is an abstract data type that serves as
+a collection of elements, with two principal operations that
+ push, which adds an element to the collection, and pop, which removes
+ the most recently added element that was not yet removed.
+
 what is FIFO and LIFO?
+first in and first out and last in first out
+
 what is the order of complexity?
+the smaller the order of complexity of the program's underlying
+algorithm, the faster it will run and the better it will scale as the input gets larger.
+
 what is the best case to search an element from an array?
+Best searching technique for searching any element in an array is Linear
+ search for a unsorted array where no specific pattern is given. Linear search takes O(N)
+time to search an element in the array. If sorted array is given then we can use Binary search technique which
+
 what is the worst case to search an element from an array?
 what is tree in data structure?
 what is graph in data structure?

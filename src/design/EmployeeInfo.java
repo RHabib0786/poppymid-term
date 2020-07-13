@@ -20,7 +20,14 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
+	public static String companyName = "Costco";
+	public String employeeName;
+	public int employeeId;
+	private String phone;
+	private String DOB = "";
+	private String address;
+	private double salary;
+
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -74,6 +81,7 @@ public class EmployeeInfo {
 
         //implement numbers of year from above two dates
 		//Calculate pension
+
 
 
 

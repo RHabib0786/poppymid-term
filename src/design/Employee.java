@@ -15,10 +15,13 @@ public interface Employee {
 	public String employeeName();
 	
 	//assignDepartment() will assign employee to departments
-    public void assignDepartment();
-	
+	public void assignDepartment(Employee department);
+
 	//calculate employee salary
 	public int calculateSalary();
+	public double Salary(double monthlySalary);
+	public double pay (double hourlyPay,int hours, int overTime);
+	public double commission (double commission);
 	
 	//employee benefit
 	public void benefitLayout();

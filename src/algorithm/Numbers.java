@@ -1,5 +1,6 @@
 package algorithm;
 
+import databases.ConnectToMongoDB;
 import databases.ConnectToSqlDB;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Random;
  *Created by mrahman on 04/02/2018.
  */
 public class Numbers {
+	private static Object ConnectToMongoDB;
 
 	/*
 	 * Show all the different kind of sorting algorithm by applying into (num array).
@@ -20,29 +22,70 @@ public class Numbers {
 	 *
 	 */
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception{
 		
 		int [] num = new int[10];
 		storeRandomNumbers(num);
-		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+		ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
+
 		//Selection Sort
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
-        connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
-        List<String> selectionSortNumbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
+        connectToMongoDB.insertDataFromArrayToMongdbTable();(num, "selection_sort", "SortingNumbers");
+		ConnectToMongoDB connectToMongdb;
+		List<String> selectionSortNumbers = connectToMongoDB.readDataBase("selection_sort", "SortingNumbers");
         printValue(selectionSortNumbers);
 		int n = num.length;
 		randomize (num, n);
+
 		//Insertion Sort
+		Sort algo = new Sort();
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
-		connectToSqlDB.insertDataFromArrayToSqlTable(num, "insertion_sort", "SortingNumbers");
-		List<String> insertionSortNumbers = connectToSqlDB.readDataBase("insertion_sort", "SortingNumbers");
+		connectToMongoDB.insertDataFromArrayToMongDBTable();(num, "insertion_sort", "SortingNumbers");
+		List<String> insertionSortNumbers = connectToMongoDB.readDataBase("insertion_sort", "SortingNumbers");
 		printValue(insertionSortNumbers);
 		//By following above, Continue for rest of the Sorting Algorithm....
+
+		randomize (num, n);
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+
+
+		randomize (num, n);
+		algo.mergeSort(num);
+		long mergeSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + mergeSortExecutionTime + " milli sec");
+
+
+		randomize (num, n);
+		algo.quickSort(num);
+		long quickSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
+
+
+		randomize (num, n);
+		algo.heapSort(num);
+		long heapSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
+
+
+		randomize (num, n);
+		algo.bucketSort(num);
+		long bucketSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bucket Sort take: " + bucketSortExecutionTime + " milli sec");
+
+
+		randomize (num, n);
+		algo.shellSort(num);
+		long shellSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Shell Sort take: " + shellSortExecutionTime + " milli sec");
+
+
 
 
 

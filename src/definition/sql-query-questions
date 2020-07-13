@@ -2,17 +2,39 @@ This file contains SQL questions.
 Please read the questions and answer.
 
 What is Database?
+a structured set of data held in a computer, especially one that is accessible in various ways.
 A.
 
 What is DBMS?
+A database management system (DBMS) is a software package
+designed to define, manipulate, retrieve and manage data in a database.
+
 What is the difference between SQL and MySQL?
+SQL is used in the accessing, updating, and manipulation of data in a
+database while MySQL is an RDBMS that allows keeping the data that exists in a database organized.
+
 What is RDBMS? How is it different from DBMS?
+Database Management System (DBMS) is a software that is used to define, create and maintain
+ a database and provides controlled access to the data. Relational
+ Database Management System (RDBMS) is an advanced version of a DBMS.
 What are Tables and Fields?
+TABLES, RECORDS, FIELDS. ... Each table contains RECORDS, which you enter into the database.
 What is SQL?
+SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database.
+
 What are Constraints in SQL?
+SQL constraints are used to specify rules for the data in a table. Constraints are used to limit
+the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table.
 What is a Primary Key?
+In the relational model of databases, a primary key is a specific choice of a minimal set of attributes that
+ uniquely specify a tuple in a relation. Informally,
+a primary key is "which attributes identify a record",
+ and in simple cases are simply a single attribute: a unique
 What is a Foreign Key?
+A FOREIGN KEY is a key used to link two tables together.
 What is Normalization?
+database design technique that reduces data redundancy and eliminates
+ undesirable characteristics like Insertion, Update and Deletion Anomalies.
 What is Denormalization?
 
 You have 2 tables given below.

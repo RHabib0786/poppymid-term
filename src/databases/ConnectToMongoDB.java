@@ -24,7 +24,6 @@ public class ConnectToMongoDB {
         MongoClient mongoClient = new MongoClient();
         mongoDatabase = mongoClient.getDatabase("students");
         System.out.println("Database Connected");
-
         return mongoDatabase;
     }
 
@@ -38,7 +37,7 @@ public class ConnectToMongoDB {
         return profile + " has been registered";
     }
 
-    public String insertIntoMongoDB(List<Student> student,String profileName){
+    public String insertIntoMongoDB(List<Student> student, String profileName){
         MongoDatabase mongoDatabase = connectToMongoDB();
         MongoCollection myCollection = mongoDatabase.getCollection(profileName);
         boolean collectionExists = mongoDatabase.listCollectionNames()
@@ -103,5 +102,19 @@ public class ConnectToMongoDB {
         for(User person:user){
             System.out.println(person.getStName()+ " "+ person.getStID());
         }
+    }
+
+    public void insertDataFromArrayToMongdbTable() {
+    }
+
+    public List<String> readDataBase(java.lang.String selection_sort, java.lang.String sortingNumbers) {
+        List<String> list = null;
+        return list;
+    }
+
+    public void insertDataFromArrayToMongdbTable(int[] num, java.lang.String insertion_sort, java.lang.String sortingNumbers) {
+    }
+
+    public void insertDataFromArrayToMongDBTable() {
     }
 }

@@ -3,7 +3,9 @@ package codelab.status;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CsvReader {
 
@@ -19,6 +21,9 @@ public class CsvReader {
         String cvsSplitBy = ",";
         BufferedReader br = null;
         List<Trainee> roster = new ArrayList<Trainee>();
+        double sum=0;
+        int count=0;
+        double avg=0;
 
         try {
             br = new BufferedReader(new FileReader(csvFilePath));
@@ -62,6 +67,12 @@ public class CsvReader {
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
         }
+        for(Trainee student:roster){
+            sum+=student.getNumberOfExercisesSolved();
+            count++;
+        }
+        avg=sum/count;
+        System.out.println("Average score is" +avg);
 
     }
 
